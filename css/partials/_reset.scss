@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+	font-family: 'Poppins',Arial,sans-serif;
+	font-size: var(--font-size, $font-size);
+	padding-top: 50px;
+	background-color: var(--background, $background);
+}
+a{
+	-webkit-text-decoration-skip: objects;
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+}
+button, input, select, textarea{
+	border: none;
+	outline: none;
+}
+
+
+
+
+[v-cloak] *{
+	display: none;
+}
+[v-cloak]::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99;
+}
+[v-cloak]::after{
+	content: '';
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	border: 6px solid #fff;
+	border-right: 6px solid #121212;
+	border-radius: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 9999;
+	animation: .5s tspin linear infinite;
+}
+@keyframes tspin{
+	0% {
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+
+
+.btn{
+			padding: 10px 15px;
+			font-size: 1em;
+			color: #fff;
+			display: inline-block;
+			font-weight: 500;
+			text-transform: uppercase;
+			background-color: var(--primary, $primary);
+			border-radius: 2px;
+			transition: background-color 0.3s;
+			text-shadow: get-shadow();
+			box-shadow: get-shadow();
+			&:hover{
+				background-color: var(--primary-dark, $primary);
+			}
+}
+
+.container{
+	padding: 0 $container-padding-lg;
+}

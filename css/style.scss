@@ -1,0 +1,71 @@
+@import "partials/variables";
+@import "partials/reset";
+@import "partials/animations";
+
+
+@import "partials/navbar";
+@import "partials/side-menu";
+@import "partials/search-form";
+@import "partials/recipe-card";
+@import "partials/image-slider";
+
+
+@import "partials/banner-section";
+@import "partials/settings-page";
+
+
+
+
+.recipes-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.recipe-card{
+		width: calc(50% - 15px);
+	}
+}
+
+
+
+.recipe-info{
+	margin: 4vw 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.image-slider, .infos{
+		width: calc(50% - 10px);
+	}
+	.infos{
+		.fid{
+			color: var(--text, $text);
+			font-size: 2em;
+			margin-bottom: 5px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.info{
+			color: var(--text-light, $text-light);
+			margin: 5px 0;
+		}
+		.author-section{
+			margin-top: 8px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+@import "partials/footer-section";
+
+
+/*@import "partials/themes";*/
+@import "partials/mediaQueries";

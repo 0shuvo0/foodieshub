@@ -1,0 +1,47 @@
+.image-slider{
+	overflow: hidden;
+	position: relative;
+	height: 220px;
+	.slider-box{
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		display: flex;
+		transition: left var(--animation-speed, $animation-speed);
+		img{
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.ctrl{
+		z-index: 2;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 1.2em;
+		background-color: rgba(0, 0, 0, 0.3);
+		padding: 5px 15px;
+		border-radius: 15px;
+		transition: background-color var(--animation-speed, $animation-speed);
+		span{
+			margin: 0 15px;
+			color: rgba(255, 255, 255, 0.7);
+			transition: color var(--animation-speed, $animation-speed);
+		}
+		&:hover{
+			background-color: rgba(0, 0, 0, 0.4);
+			span{
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+		i{
+			color: rgba(255, 255, 255, 0.5);
+			transition: color var(--animation-speed, $animation-speed);
+			&:hover{
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+}

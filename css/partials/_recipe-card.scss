@@ -1,0 +1,94 @@
+.author-section{
+		display: flex;
+		align-items: center;
+		.dp{
+			height: 45px;
+			width: 45px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+		.info{
+			padding-left: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.name{
+				font-size: 1em;
+				font-weight: 500;
+				color: var(--text, $text);
+				margin-bottom: 3px;
+			}
+			.post-date{
+				font-size: 0.8em;
+				color: var(--text-light, $text-light);
+			}
+		}
+}
+
+
+.recipe-card{
+	margin: 15px 0;
+	border-radius: 5px;
+	box-shadow: get-shadow();
+	padding: 15px;
+	background-color: var(--dark, $dark);
+	transform: translateY(50px);
+	opacity: 0;
+	&.active{
+		animation: slide-in-up var(--animation-speed, $animation-speed) ease-out forwards;
+	}
+	.recipe-title{
+		margin: 10px 0;
+		font-size: 1.5em;
+		line-height: 1.5em;
+		height: 1.5em;
+		letter-spacing: 1px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		text-transform: capitalize;
+		color: var(--text, $text);
+	}
+	.image-slider{
+		border-radius: 3px;
+	}
+	.react-ctrl{
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 15px;
+		color: var(--text, $text);
+		.ctrl{
+			i{
+				margin-right: 3px;
+				&.active{
+					color: var(--primary, $primary);
+					text-shadow: get-shadow();
+				}
+			}
+			&.react{
+				margin-right: 30px;
+			}
+		}
+	}
+	/*.comment-form{
+		display: flex;
+		align-items: center;
+		padding: 5px 0;
+		textarea{
+			height: 1.2em;
+			font-size: 1.2em;
+			flex-grow: 1;
+			padding-right: 10px;
+			background-color: transparent;
+			color: var(--text, $text);
+			&::placeholder{
+				color: var(--text-light, $text-light);
+			}
+		}
+		button{
+			font-size: 1.1em;
+			background-color: transparent;
+			color: var(--text-light, $text-light);
+		}
+	}*/
+}

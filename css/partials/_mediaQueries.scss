@@ -1,0 +1,106 @@
+@media(max-width: $medium-screen-size){
+	.navbar{
+		.nav{
+			display: none;
+		}
+		.toggle-btn{
+			display: inline-block;
+		}
+	}
+	.section{
+		text-align: center;
+		.cell{
+			width: 100%;
+			padding: 0;
+			.info{
+				ul{
+					li{
+						display: inline-block;
+						margin: 3px 10px 3px 0;
+						padding-left: 4px;
+					}
+				}
+			}
+		}
+		.quote{
+			text-align: left;
+		}
+	}
+	.gallery{
+		margin: 4vw 0;
+		img{
+			height: 27vw;
+		}
+	}
+	.top-cheifs-section .title{
+		text-align: center;
+	}	
+	.top-cheifs-section .top-cheifs .top-cheif{
+		width: 49%;
+		height: 18vw;
+		border-radius: 3px;
+		background-color: var(--light, $light);
+		box-shadow: get-shadow();
+		transition: background-color var(--animation-speed, $animation-speed);
+		&:hover{
+			background-color: var(--shadow, $shadow);
+		}
+		.content{
+			padding: 2vw 1vw;
+		}
+	}
+	.recipe-info{
+		.image-slider, .infos{
+			width: 100%;
+		}
+		.infos{
+			margin-top: 5px;
+		}
+	}
+	.settings-section .options{
+		width: 80%;
+		margin-left: 10%;
+	}
+	.footer-content{
+		justify-content: space-around;
+		.content-box{
+			margin-bottom: 2vw;
+			text-align: center;
+			width: 50%;
+		}
+	}
+	.image-slider{
+		height: 40vw;
+	}
+	.recipes-container .recipe-card{
+		width: 100%;
+	}
+	.container{
+		padding: 0 $container-padding-mid;
+	}
+}
+@media(max-width: $small-screen-size){
+	.top-cheifs-section .top-cheifs .top-cheif{
+		width: 100%;
+		height: 36vw;
+		.content{
+			padding: 3vw 2vw;
+		}
+	}
+	.settings-section .options{
+		width: 100%;
+		margin-left: 0;
+	}
+	.footer-content .content-box{
+		width: 100%;
+	}
+	.search-form{
+		max-width: 100%;
+	}
+	.image-slider{
+		height: 60vw;
+	}
+	.container{
+		padding: 0 $container-padding-sm;
+	}
+}

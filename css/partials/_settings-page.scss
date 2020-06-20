@@ -1,0 +1,52 @@
+.settings-section{
+	flex-direction: column;
+	align-items: flex-start;
+	.options{
+		width: 60%;
+		margin-left: 20%;
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		.btn{
+			margin-bottom: 1vw;
+			i{
+				display: none;
+			}
+			&.active i{
+				display: inline;
+			}
+		}
+		.option{
+			margin: 1vw 0;
+			height: 60px;
+			width: 60px;
+			border-radius: 3px;
+			box-shadow: get-shadow();
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&.highlight{
+				border: 4px solid var(--primary, $primary);
+			}
+			i{
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				line-height: 40px;
+				font-size: 1.2em;
+				text-align: center;
+				background-color: var(--primary, $primary);
+				color: var(--text, $text);
+				border-radius: 50%;
+				box-shadow: get-shadow();
+				opacity: 0;
+				transform: scale(0);
+				transition: opacity var(--animation-speed, $animation-speed), transform var(--animation-speed, $animation-speed);
+			}
+			&.active i{
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}
