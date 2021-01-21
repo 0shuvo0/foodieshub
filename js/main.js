@@ -183,7 +183,7 @@ var Homepage = Vue.component('home-page', {
 		<section class="section banner-section">
 			<div class="cell content">
 				<h2 class="title">What are we about.</h2>
-				<p class="info">WeGotSauce is a place where you can please your soul and tummy with delicious food recepies of all cuisine.</p>
+				<p class="info">FoodiesHub is a place where you can please your soul and tummy with delicious food recepies of all cuisine.</p>
 				<a href="#" class="btn">Start Exploring</a>
 			</div>
 			<div class="cell">
